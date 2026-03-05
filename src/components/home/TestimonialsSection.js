@@ -16,16 +16,16 @@ export default function TestimonialsSection() {
         <div className="grid sm:grid-cols-3 gap-5">
           {REVIEWS.map(r => (
             <div key={r.name} className="card p-6 relative">
-              <div className="absolute top-4 right-5 font-display text-5xl text-teal-DEFAULT/20 leading-none">"</div>
-              <div className="text-gold-DEFAULT text-sm tracking-widest mb-3">{"★".repeat(r.rating)}</div>
+              <div className="absolute top-4 right-5 font-display text-5xl text-teal/20 leading-none">"</div>
+              <div className="text-gold text-sm tracking-widest mb-3">{"★".repeat(r.rating)}</div>
               <p className="text-sm text-white/65 leading-relaxed mb-5">{r.text}</p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-teal-DEFAULT to-gold-DEFAULT flex items-center justify-center text-navy font-black text-sm font-mono">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-teal to-gold flex items-center justify-center text-navy font-black text-sm font-mono">
                   {r.initials}
                 </div>
                 <div>
                   <p className="font-semibold text-sm text-white">{r.name}</p>
-                  <p className="text-xs text-teal-DEFAULT">{r.role}</p>
+                  <p className="text-xs text-teal">{r.role}</p>
                 </div>
               </div>
             </div>
@@ -35,3 +35,4 @@ export default function TestimonialsSection() {
     </section>
   );
 }
+

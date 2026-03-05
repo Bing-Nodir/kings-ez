@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="md:col-span-2">
           <Link href="/" className="flex items-center gap-2 mb-4">
             <span className="text-2xl drop-shadow-[0_0_8px_rgba(245,166,35,.6)]">👑</span>
-            <span className="font-display font-black text-lg text-white">Kings <span className="text-gold-DEFAULT">Education Zone</span></span>
+            <span className="font-display font-black text-lg text-white">Kings <span className="text-gold">Education Zone</span></span>
           </Link>
           <p className="text-sm text-white/40 leading-relaxed max-w-xs">
             O'zbekistonning birinchi AI-quvvatli IT ta'lim platformasi. O'zbek tilida, professional sifatda.
@@ -28,7 +28,7 @@ export default function Footer() {
         {/* Links */}
         {Object.entries(LINKS).map(([title, links]) => (
           <div key={title}>
-            <h4 className="font-mono text-xs tracking-[.15em] uppercase text-teal-DEFAULT mb-4">{title}</h4>
+            <h4 className="font-mono text-xs tracking-[.15em] uppercase text-teal mb-4">{title}</h4>
             <ul className="space-y-2.5">
               {links.map(([label, href]) => (
                 <li key={label}>
@@ -47,3 +47,4 @@ export default function Footer() {
     </footer>
   );
 }
+

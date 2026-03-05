@@ -40,7 +40,7 @@ export default function RegisterPage() {
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center gap-2 mb-6">
             <span className="text-3xl drop-shadow-[0_0_8px_rgba(245,166,35,.6)]">👑</span>
-            <span className="font-display font-black text-xl text-white">Kings <span className="text-gold-DEFAULT">EZ</span></span>
+            <span className="font-display font-black text-xl text-white">Kings <span className="text-gold">EZ</span></span>
           </Link>
           <h1 className="font-display font-black text-3xl text-white">O'rganishni Boshlang!</h1>
           <p className="text-white/50 mt-2">Bepul hisob yarating</p>
@@ -87,18 +87,19 @@ export default function RegisterPage() {
 
           <p className="text-xs text-white/30 text-center mt-4 leading-relaxed">
             Ro'yxatdan o'tib, siz{" "}
-            <Link href="/terms" className="text-teal-DEFAULT/70 hover:text-teal-DEFAULT">Foydalanish shartlari</Link>
+            <Link href="/terms" className="text-teal/70 hover:text-teal">Foydalanish shartlari</Link>
             {" "}va{" "}
-            <Link href="/privacy" className="text-teal-DEFAULT/70 hover:text-teal-DEFAULT">Maxfiylik siyosatimizga</Link>
+            <Link href="/privacy" className="text-teal/70 hover:text-teal">Maxfiylik siyosatimizga</Link>
             {" "}rozilik bildirasiz.
           </p>
 
           <p className="text-center text-sm text-white/40 mt-4">
             Hisobingiz bormi?{" "}
-            <Link href="/auth/login" className="text-teal-DEFAULT hover:text-teal-light font-medium">Kirish</Link>
+            <Link href="/auth/login" className="text-teal hover:text-teal-light font-medium">Kirish</Link>
           </p>
         </div>
       </div>
     </div>
   );
 }
+

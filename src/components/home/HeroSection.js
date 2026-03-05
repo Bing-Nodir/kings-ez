@@ -41,14 +41,14 @@ export default function HeroSection() {
         <span className="text-2xl">🤖</span>
         <div>
           <p className="text-sm font-semibold text-white">AI Mentor faol</p>
-          <p className="text-xs text-teal-DEFAULT">Claude bilan o'rganish</p>
+          <p className="text-xs text-teal">Claude bilan o'rganish</p>
         </div>
       </div>
       <div className="absolute bottom-1/3 left-8 hidden xl:flex items-center gap-3 glass px-4 py-3 rounded-2xl z-10" style={{ animation: "float 5s ease-in-out infinite reverse" }}>
         <span className="text-2xl">🏆</span>
         <div>
           <p className="text-sm font-semibold text-white">Sertifikat tayyor!</p>
-          <p className="text-xs text-gold-DEFAULT">Aziz — Data Analytics</p>
+          <p className="text-xs text-gold">Aziz — Data Analytics</p>
         </div>
       </div>
 
@@ -57,8 +57,8 @@ export default function HeroSection() {
 
         {/* Badge */}
         <div className={`inline-flex items-center gap-2 glass badge-teal px-4 py-2 rounded-full mb-8 transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-          <span className="w-2 h-2 rounded-full bg-teal-DEFAULT animate-pulse" />
-          <span className="text-xs font-mono tracking-wider uppercase text-teal-DEFAULT">
+          <span className="w-2 h-2 rounded-full bg-teal animate-pulse" />
+          <span className="text-xs font-mono tracking-wider uppercase text-teal">
             O'zbekistonning #1 AI EdTech Platformasi
           </span>
         </div>
@@ -72,7 +72,7 @@ export default function HeroSection() {
 
         {/* Subtitle */}
         <p className={`text-lg text-white/55 max-w-2xl mx-auto mb-10 leading-relaxed transition-all duration-700 delay-200 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-          O'zbek tilida, <span className="text-teal-DEFAULT font-medium">Claude AI</span> yordamida — Data Analytics, Python, React, ML va yana ko'p narsani o'rganing.
+          O'zbek tilida, <span className="text-teal font-medium">Claude AI</span> yordamida — Data Analytics, Python, React, ML va yana ko'p narsani o'rganing.
           Online, Offline yoki Hybrid — siz tanlaysiz.
         </p>
 
@@ -90,10 +90,10 @@ export default function HeroSection() {
         <div className={`grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto transition-all duration-700 delay-500 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
           {STATS.map(({ icon: Icon, label, value }) => (
             <div key={label} className="card px-4 py-4 text-center">
-              <div className="w-8 h-8 rounded-lg bg-teal-DEFAULT/10 flex items-center justify-center mx-auto mb-2">
-                <Icon className="w-4 h-4 text-teal-DEFAULT" />
+              <div className="w-8 h-8 rounded-lg bg-teal/10 flex items-center justify-center mx-auto mb-2">
+                <Icon className="w-4 h-4 text-teal" />
               </div>
-              <div className="font-display font-black text-2xl text-gold-DEFAULT">{value}</div>
+              <div className="font-display font-black text-2xl text-gold">{value}</div>
               <div className="text-xs text-white/40 mt-0.5 leading-tight">{label}</div>
             </div>
           ))}
@@ -102,3 +102,4 @@ export default function HeroSection() {
     </section>
   );
 }
+

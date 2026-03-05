@@ -11,8 +11,8 @@ export default function DashboardClient({ user, enrollments, chatHistory }) {
   const [tab, setTab] = useState("courses");
 
   const stats = [
-    { icon: BookOpen,      label: "Kurslarim",     value: enrollments.length,                            color: "text-teal-DEFAULT" },
-    { icon: MessageSquare, label: "AI Suhbatlar",  value: chatHistory.filter(m => m.role === "user").length, color: "text-gold-DEFAULT" },
+    { icon: BookOpen,      label: "Kurslarim",     value: enrollments.length,                            color: "text-teal" },
+    { icon: MessageSquare, label: "AI Suhbatlar",  value: chatHistory.filter(m => m.role === "user").length, color: "text-gold" },
     { icon: Award,         label: "Sertifikatlar", value: 0,                                             color: "text-green-400" },
     { icon: TrendingUp,    label: "Kunlik Streak",  value: "7 kun",                                      color: "text-purple-400" },
   ];
@@ -27,7 +27,7 @@ export default function DashboardClient({ user, enrollments, chatHistory }) {
             {user.image ? (
               <img src={user.image} alt="" className="w-14 h-14 rounded-2xl" />
             ) : (
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-teal-DEFAULT to-gold-DEFAULT flex items-center justify-center text-navy font-black text-xl font-display">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-teal to-gold flex items-center justify-center text-navy font-black text-xl font-display">
                 {user.name?.[0]?.toUpperCase()}
               </div>
             )}
@@ -59,7 +59,7 @@ export default function DashboardClient({ user, enrollments, chatHistory }) {
           {[["courses", "Kurslarim", BookOpen], ["chat", "AI Tarix", MessageSquare]].map(([id, label, Icon]) => (
             <button key={id} onClick={() => setTab(id)}
               className={cn("flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all",
-                tab === id ? "bg-teal-DEFAULT text-navy shadow-[0_4px_12px_rgba(0,188,212,.3)]" : "text-white/50 hover:text-white"
+                tab === id ? "bg-teal text-navy shadow-[0_4px_12px_rgba(0,188,212,.3)]" : "text-white/50 hover:text-white"
               )}>
               <Icon className="w-4 h-4" /> {label}
             </button>
@@ -85,17 +85,17 @@ export default function DashboardClient({ user, enrollments, chatHistory }) {
                         {e.course.category?.icon}
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-semibold text-sm text-white truncate group-hover:text-teal-DEFAULT transition-colors">{e.course.title}</h3>
+                        <h3 className="font-semibold text-sm text-white truncate group-hover:text-teal transition-colors">{e.course.title}</h3>
                         <p className={cn("text-xs mt-0.5 badge px-2 py-0.5", LEVEL_COLORS[e.course.level])}>{LEVEL_LABELS[e.course.level]}</p>
                       </div>
                     </div>
                     {/* Progress bar placeholder */}
                     <div className="h-1.5 bg-white/5 rounded-full mb-2">
-                      <div className="h-full bg-gradient-to-r from-teal-DEFAULT to-teal-light rounded-full" style={{ width: "30%" }} />
+                      <div className="h-full bg-gradient-to-r from-teal to-teal-light rounded-full" style={{ width: "30%" }} />
                     </div>
                     <div className="flex items-center justify-between text-xs text-white/35">
                       <span>30% yakunlangan</span>
-                      <span className="flex items-center gap-1 text-teal-DEFAULT"><Play className="w-3 h-3" />Davom et</span>
+                      <span className="flex items-center gap-1 text-teal"><Play className="w-3 h-3" />Davom et</span>
                     </div>
                     <div className="flex items-center gap-1 mt-3 text-xs text-white/25">
                       <Clock className="w-3 h-3" />
@@ -119,7 +119,7 @@ export default function DashboardClient({ user, enrollments, chatHistory }) {
               <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
                 <div className={cn("max-w-[75%] px-4 py-2.5 rounded-2xl text-sm leading-relaxed",
                   m.role === "user"
-                    ? "bg-teal-DEFAULT/15 border border-teal-DEFAULT/20 rounded-br-sm"
+                    ? "bg-teal/15 border border-teal/20 rounded-br-sm"
                     : "bg-white/5 border border-white/8 rounded-bl-sm text-white/75"
                 )}>
                   {m.content}
@@ -133,3 +133,4 @@ export default function DashboardClient({ user, enrollments, chatHistory }) {
     </div>
   );
 }
+

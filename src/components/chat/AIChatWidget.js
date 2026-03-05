@@ -89,12 +89,12 @@ export default function AIChatWidget() {
       {open && (
         <div className="w-[360px] glass rounded-2xl overflow-hidden shadow-2xl animate-fade-up">
           {/* Header */}
-          <div className="px-4 py-3 flex items-center gap-3 border-b border-teal-DEFAULT/15 bg-gradient-to-r from-teal-DEFAULT/10 to-transparent">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-teal-DEFAULT to-teal-light flex items-center justify-center text-navy text-sm font-bold">🤖</div>
+          <div className="px-4 py-3 flex items-center gap-3 border-b border-teal/15 bg-gradient-to-r from-teal/10 to-transparent">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-teal to-teal-light flex items-center justify-center text-navy text-sm font-bold">🤖</div>
             <div className="flex-1">
               <p className="font-semibold text-sm">KEZ AI Mentor</p>
-              <p className="text-xs text-teal-DEFAULT flex items-center gap-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-teal-DEFAULT animate-pulse inline-block" />
+              <p className="text-xs text-teal flex items-center gap-1">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal animate-pulse inline-block" />
                 Claude bilan ishlaydi
               </p>
             </div>
@@ -109,7 +109,7 @@ export default function AIChatWidget() {
               <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
                 <div className={`max-w-[85%] px-3.5 py-2.5 rounded-2xl text-sm leading-relaxed ${
                   m.role === "user"
-                    ? "bg-teal-DEFAULT/15 border border-teal-DEFAULT/25 rounded-br-sm"
+                    ? "bg-teal/15 border border-teal/25 rounded-br-sm"
                     : "bg-white/5 border border-white/8 rounded-bl-sm"
                 }`}>
                   {m.role === "assistant" ? (
@@ -139,7 +139,7 @@ export default function AIChatWidget() {
             <button
               onClick={send}
               disabled={loading || !input.trim()}
-              className="w-10 h-10 min-w-[2.5rem] rounded-xl bg-gradient-to-br from-teal-DEFAULT to-teal-light text-navy flex items-center justify-center hover:opacity-90 transition-opacity disabled:opacity-40 disabled:cursor-not-allowed shadow-[0_4px_15px_rgba(0,188,212,.3)]"
+              className="w-10 h-10 min-w-[2.5rem] rounded-xl bg-gradient-to-br from-teal to-teal-light text-navy flex items-center justify-center hover:opacity-90 transition-opacity disabled:opacity-40 disabled:cursor-not-allowed shadow-[0_4px_15px_rgba(0,188,212,.3)]"
             >
               <Send className="w-4 h-4" />
             </button>
@@ -150,10 +150,11 @@ export default function AIChatWidget() {
       {/* Trigger button */}
       <button
         onClick={() => setOpen(p => !p)}
-        className="w-14 h-14 rounded-full bg-gradient-to-br from-teal-DEFAULT to-teal-light text-navy text-xl flex items-center justify-center shadow-[0_8px_30px_rgba(0,188,212,.4)] animate-pulse-glow hover:scale-110 transition-transform"
+        className="w-14 h-14 rounded-full bg-gradient-to-br from-teal to-teal-light text-navy text-xl flex items-center justify-center shadow-[0_8px_30px_rgba(0,188,212,.4)] animate-pulse-glow hover:scale-110 transition-transform"
       >
         {open ? <X className="w-6 h-6" /> : <Bot className="w-6 h-6" />}
       </button>
     </div>
   );
 }
+

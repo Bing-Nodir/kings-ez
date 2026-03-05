@@ -55,12 +55,12 @@ export default function PricingSection() {
         </div>
         <div className="grid sm:grid-cols-3 gap-5 items-start">
           {PLANS.map(p => (
-            <div key={p.name} className={`rounded-2xl p-6 flex flex-col ${p.featured ? "bg-gradient-to-b from-teal-DEFAULT/10 to-transparent border border-teal-DEFAULT/30 shadow-[0_30px_80px_rgba(0,188,212,.15)] scale-[1.03]" : "card"}`}>
-              <div className={`inline-block text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3 w-fit ${p.featured ? "bg-gold-DEFAULT text-navy" : "bg-teal-DEFAULT/10 text-teal-DEFAULT border border-teal-DEFAULT/20"}`}>
+            <div key={p.name} className={`rounded-2xl p-6 flex flex-col ${p.featured ? "bg-gradient-to-b from-teal/10 to-transparent border border-teal/30 shadow-[0_30px_80px_rgba(0,188,212,.15)] scale-[1.03]" : "card"}`}>
+              <div className={`inline-block text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3 w-fit ${p.featured ? "bg-gold text-navy" : "bg-teal/10 text-teal border border-teal/20"}`}>
                 {p.tag}
               </div>
               <h3 className="font-display font-bold text-xl text-white mb-1">{p.name}</h3>
-              <div className="font-mono text-3xl font-bold text-teal-DEFAULT flex items-end gap-1 my-3">
+              <div className="font-mono text-3xl font-bold text-teal flex items-end gap-1 my-3">
                 {p.price}<span className="text-sm text-white/40 font-body font-normal mb-1">{p.per}</span>
               </div>
               <p className="text-sm text-white/45 mb-5">{p.desc}</p>
@@ -68,7 +68,7 @@ export default function PricingSection() {
                 {p.features.map(f => (
                   <li key={f.text} className="flex items-center gap-2.5 text-sm">
                     {f.ok
-                      ? <Check className="w-4 h-4 text-teal-DEFAULT flex-shrink-0" />
+                      ? <Check className="w-4 h-4 text-teal flex-shrink-0" />
                       : <Minus className="w-4 h-4 text-white/20 flex-shrink-0" />}
                     <span className={f.ok ? "text-white/70" : "text-white/25"}>{f.text}</span>
                   </li>
@@ -84,3 +84,4 @@ export default function PricingSection() {
     </section>
   );
 }
+

@@ -50,7 +50,7 @@ export default function CoursesPageClient({ courses, categories }) {
 
           {/* Category filter */}
           <div className="flex gap-2 flex-wrap">
-            <button onClick={() => setCategory("")} className={cn("px-3 py-2 rounded-lg text-xs font-medium transition-all", !category ? "bg-teal-DEFAULT text-navy" : "bg-white/5 text-white/60 hover:text-white border border-white/10")}>
+            <button onClick={() => setCategory("")} className={cn("px-3 py-2 rounded-lg text-xs font-medium transition-all", !category ? "bg-teal text-navy" : "bg-white/5 text-white/60 hover:text-white border border-white/10")}>
               Hammasi
             </button>
             {categories.map(c => (
@@ -68,7 +68,7 @@ export default function CoursesPageClient({ courses, categories }) {
             <SlidersHorizontal className="w-4 h-4 text-white/30 self-center" />
             {LEVELS.map(([val, label]) => (
               <button key={val} onClick={() => setLevel(val)}
-                className={cn("px-3 py-2 rounded-lg text-xs font-medium transition-all", level === val ? "bg-gold-DEFAULT text-navy" : "bg-white/5 text-white/60 hover:text-white border border-white/10")}>
+                className={cn("px-3 py-2 rounded-lg text-xs font-medium transition-all", level === val ? "bg-gold text-navy" : "bg-white/5 text-white/60 hover:text-white border border-white/10")}>
                 {label}
               </button>
             ))}
@@ -99,18 +99,18 @@ export default function CoursesPageClient({ courses, categories }) {
                         {LEVEL_LABELS[c.level]}
                       </span>
                     </div>
-                    <h3 className="font-display font-bold text-base text-white mb-1.5 group-hover:text-teal-DEFAULT transition-colors">{c.title}</h3>
+                    <h3 className="font-display font-bold text-base text-white mb-1.5 group-hover:text-teal transition-colors">{c.title}</h3>
                     <p className="text-xs text-white/45 leading-relaxed flex-1 mb-3">{c.description}</p>
                     <div className="flex items-center gap-3 text-xs text-white/30 mb-3">
                       <span className="flex items-center gap-1"><Clock className="w-3 h-3" />{c.duration}h</span>
                       <span className="flex items-center gap-1"><BookOpen className="w-3 h-3" />{c.lectureCount}</span>
-                      <span className="flex items-center gap-1"><Star className="w-3 h-3 text-gold-DEFAULT/60" />{c._count.enrollments}</span>
+                      <span className="flex items-center gap-1"><Star className="w-3 h-3 text-gold/60" />{c._count.enrollments}</span>
                     </div>
                     <div className="flex items-center justify-between pt-3 border-t border-white/5">
                       <span className="font-display font-black text-lg" style={{ color: c.category?.color || "#00BCD4" }}>
                         {formatPrice(c.price)}
                       </span>
-                      <span className="text-xs text-teal-DEFAULT flex items-center gap-1">
+                      <span className="text-xs text-teal flex items-center gap-1">
                         Ko'rish <ArrowRight className="w-3 h-3" />
                       </span>
                     </div>
@@ -124,3 +124,4 @@ export default function CoursesPageClient({ courses, categories }) {
     </div>
   );
 }
+

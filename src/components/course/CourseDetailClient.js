@@ -66,11 +66,11 @@ export default function CourseDetailClient({ course, isEnrolled, isLoggedIn }) {
 
             {/* Meta */}
             <div className="flex flex-wrap gap-5 text-sm text-white/45">
-              <span className="flex items-center gap-1.5"><Clock className="w-4 h-4 text-teal-DEFAULT" />{course.duration} soat</span>
-              <span className="flex items-center gap-1.5"><BookOpen className="w-4 h-4 text-teal-DEFAULT" />{course.lectureCount} dars</span>
-              <span className="flex items-center gap-1.5"><Users className="w-4 h-4 text-gold-DEFAULT" />{course._count.enrollments} o'quvchi</span>
+              <span className="flex items-center gap-1.5"><Clock className="w-4 h-4 text-teal" />{course.duration} soat</span>
+              <span className="flex items-center gap-1.5"><BookOpen className="w-4 h-4 text-teal" />{course.lectureCount} dars</span>
+              <span className="flex items-center gap-1.5"><Users className="w-4 h-4 text-gold" />{course._count.enrollments} o'quvchi</span>
               {course._count.reviews > 0 && (
-                <span className="flex items-center gap-1.5"><Star className="w-4 h-4 text-gold-DEFAULT fill-gold-DEFAULT" />{course._count.reviews} sharh</span>
+                <span className="flex items-center gap-1.5"><Star className="w-4 h-4 text-gold fill-gold" />{course._count.reviews} sharh</span>
               )}
             </div>
           </div>
@@ -100,7 +100,7 @@ export default function CourseDetailClient({ course, isEnrolled, isLoggedIn }) {
             <div className="mt-5 space-y-2">
               {["O'zbek tilida to'liq kurs", "AI Mentor (Claude) kirish", "Umr bo'yi kirish", "Sertifikat", "Mobil qurilmalarda ishlash"].map(f => (
                 <div key={f} className="flex items-center gap-2 text-sm text-white/60">
-                  <Check className="w-3.5 h-3.5 text-teal-DEFAULT" /> {f}
+                  <Check className="w-3.5 h-3.5 text-teal" /> {f}
                 </div>
               ))}
             </div>
@@ -121,7 +121,7 @@ export default function CourseDetailClient({ course, isEnrolled, isLoggedIn }) {
                     className="w-full flex items-center justify-between p-4 hover:bg-white/[0.02] transition-colors"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-mono font-bold text-teal-DEFAULT bg-teal-DEFAULT/10">
+                      <div className="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-mono font-bold text-teal bg-teal/10">
                         {sec.order}
                       </div>
                       <span className="font-semibold text-sm text-white">{sec.title}</span>
@@ -135,7 +135,7 @@ export default function CourseDetailClient({ course, isEnrolled, isLoggedIn }) {
                         <div key={lesson.id} className="flex items-center gap-3 px-4 py-3 hover:bg-white/[0.02] transition-colors">
                           <div className="w-6 h-6 rounded-md flex items-center justify-center">
                             {lesson.isFree
-                              ? <Play className="w-3.5 h-3.5 text-teal-DEFAULT" />
+                              ? <Play className="w-3.5 h-3.5 text-teal" />
                               : <Lock className="w-3.5 h-3.5 text-white/25" />}
                           </div>
                           <span className="flex-1 text-sm text-white/70">{lesson.title}</span>
@@ -159,7 +159,7 @@ export default function CourseDetailClient({ course, isEnrolled, isLoggedIn }) {
               <ul className="space-y-2.5">
                 {["Asosiy tushunchalar va nazariya", "Amaliy loyihalar va mashqlar", "Real ish jarayonlari", "AI Mentor bilan interaktiv o'qish", "Portfolio loyiha"].map(item => (
                   <li key={item} className="flex items-start gap-2 text-sm text-white/65">
-                    <Check className="w-4 h-4 text-teal-DEFAULT mt-0.5 flex-shrink-0" />
+                    <Check className="w-4 h-4 text-teal mt-0.5 flex-shrink-0" />
                     {item}
                   </li>
                 ))}
@@ -171,3 +171,4 @@ export default function CourseDetailClient({ course, isEnrolled, isLoggedIn }) {
     </div>
   );
 }
+

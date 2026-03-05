@@ -32,7 +32,7 @@ function CourseCard({ course }) {
             </span>
           </div>
 
-          <h3 className="font-display font-bold text-lg text-white mb-2 group-hover:text-teal-DEFAULT transition-colors">
+          <h3 className="font-display font-bold text-lg text-white mb-2 group-hover:text-teal transition-colors">
             {course.title}
           </h3>
           <p className="text-sm text-white/50 leading-relaxed flex-1 mb-4">
@@ -44,7 +44,7 @@ function CourseCard({ course }) {
             <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" />{course.duration} soat</span>
             <span className="flex items-center gap-1"><BookOpen className="w-3.5 h-3.5" />{course.lectureCount} dars</span>
             {course._count.reviews > 0 && (
-              <span className="flex items-center gap-1 text-gold-DEFAULT/70"><Star className="w-3.5 h-3.5 fill-current" />{course._count.reviews}</span>
+              <span className="flex items-center gap-1 text-gold/70"><Star className="w-3.5 h-3.5 fill-current" />{course._count.reviews}</span>
             )}
           </div>
 
@@ -53,7 +53,7 @@ function CourseCard({ course }) {
             <span className="font-display font-black text-xl" style={{ color: accentColor }}>
               {formatPrice(course.price)}
             </span>
-            <span className="btn-ghost text-xs py-1.5 px-3 group-hover:text-teal-DEFAULT group-hover:border group-hover:border-teal-DEFAULT/30 rounded-full transition-all">
+            <span className="btn-ghost text-xs py-1.5 px-3 group-hover:text-teal group-hover:border group-hover:border-teal/30 rounded-full transition-all">
               Boshlash <ArrowRight className="w-3 h-3 inline ml-1" />
             </span>
           </div>
@@ -92,3 +92,4 @@ export default function CoursesSection({ courses }) {
     </section>
   );
 }
+

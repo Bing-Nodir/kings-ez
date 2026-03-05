@@ -37,7 +37,7 @@ export default function LoginPage() {
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center gap-2 mb-6">
             <span className="text-3xl drop-shadow-[0_0_8px_rgba(245,166,35,.6)]">👑</span>
-            <span className="font-display font-black text-xl text-white">Kings <span className="text-gold-DEFAULT">EZ</span></span>
+            <span className="font-display font-black text-xl text-white">Kings <span className="text-gold">EZ</span></span>
           </Link>
           <h1 className="font-display font-black text-3xl text-white">Xush Kelibsiz!</h1>
           <p className="text-white/50 mt-2">Hisobingizga kiring</p>
@@ -80,10 +80,11 @@ export default function LoginPage() {
 
           <p className="text-center text-sm text-white/40 mt-5">
             Hisob yo'qmi?{" "}
-            <Link href="/auth/register" className="text-teal-DEFAULT hover:text-teal-light font-medium">Ro'yxatdan o'ting</Link>
+            <Link href="/auth/register" className="text-teal hover:text-teal-light font-medium">Ro'yxatdan o'ting</Link>
           </p>
         </div>
       </div>
     </div>
   );
 }
+

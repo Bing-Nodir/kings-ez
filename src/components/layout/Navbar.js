@@ -40,7 +40,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2 group">
           <span className="text-2xl drop-shadow-[0_0_8px_rgba(245,166,35,0.6)] group-hover:scale-110 transition-transform">👑</span>
           <span className="font-display font-black text-lg text-white">
-            Kings <span className="text-gold-DEFAULT">EZ</span>
+            Kings <span className="text-gold">EZ</span>
           </span>
         </Link>
 
@@ -52,7 +52,7 @@ export default function Navbar() {
               href={l.href}
               className={cn(
                 "text-sm font-medium transition-colors",
-                pathname === l.href ? "text-teal-DEFAULT" : "text-white/60 hover:text-white"
+                pathname === l.href ? "text-teal" : "text-white/60 hover:text-white"
               )}
             >
               {l.label}
@@ -66,12 +66,12 @@ export default function Navbar() {
             <div className="relative">
               <button
                 onClick={() => setUserMenu(p => !p)}
-                className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:border-teal-DEFAULT/30 transition-all"
+                className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:border-teal/30 transition-all"
               >
                 {session.user.image ? (
                   <img src={session.user.image} alt="" className="w-7 h-7 rounded-full" />
                 ) : (
-                  <div className="w-7 h-7 rounded-full bg-gradient-to-br from-teal-DEFAULT to-gold-DEFAULT flex items-center justify-center text-navy font-bold text-xs">
+                  <div className="w-7 h-7 rounded-full bg-gradient-to-br from-teal to-gold flex items-center justify-center text-navy font-bold text-xs">
                     {session.user.name?.[0]?.toUpperCase()}
                   </div>
                 )}
@@ -93,7 +93,7 @@ export default function Navbar() {
                       <BookOpen className="w-4 h-4" /> Kurslarim
                     </Link>
                     {session.user.role === "ADMIN" && (
-                      <Link href="/admin" className="flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm text-gold-DEFAULT hover:bg-gold-DEFAULT/10 transition-colors" onClick={() => setUserMenu(false)}>
+                      <Link href="/admin" className="flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm text-gold hover:bg-gold/10 transition-colors" onClick={() => setUserMenu(false)}>
                         ⚙️ Admin Panel
                       </Link>
                     )}
@@ -146,3 +146,4 @@ export default function Navbar() {
     </nav>
   );
 }
+
