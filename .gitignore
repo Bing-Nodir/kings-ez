@@ -16,6 +16,8 @@ env/
 # Build and dist
 dist/
 build/
+.next/
+.vercel/
 *.o
 *.a
 *.so
@@ -38,3 +40,6 @@ Thumbs.db
 *.tmp
 *.bak
 *.cache
+
+# Local database
+prisma/dev.db
