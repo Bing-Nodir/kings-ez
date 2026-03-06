@@ -122,7 +122,7 @@ Vercel deploy uchun `prisma/schema.postgres.prisma` ishlatiladi.
 
 1. Vercel'da Postgres/Neon/Supabase dan PostgreSQL ulang.
 2. Vercel environment variables kiriting:
-   - `DATABASE_URL`
+   - `POSTGRES_PRISMA_URL`
    - `NEXTAUTH_URL`
    - `NEXT_PUBLIC_APP_URL`
    - `NEXTAUTH_SECRET`
