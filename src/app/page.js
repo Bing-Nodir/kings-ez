@@ -11,6 +11,8 @@ import Footer from "@/components/layout/Footer";
 import AIChatWidget from "@/components/chat/AIChatWidget";
 import { db } from "@/lib/db";
 
+export const dynamic = "force-dynamic";
+
 export default async function HomePage() {
   const featuredCourses = await db.course.findMany({
     where:   { isPublished: true, isFeatured: true },

@@ -115,6 +115,28 @@ src/
 - **Validation**: Zod
 - **Animations**: Framer Motion
 
+## Vercel + PostgreSQL Deploy
+
+Local development `prisma/schema.prisma` orqali SQLite bilan ishlaydi.
+Vercel deploy uchun `prisma/schema.postgres.prisma` ishlatiladi.
+
+1. Vercel'da Postgres/Neon/Supabase dan PostgreSQL ulang.
+2. Vercel environment variables kiriting:
+   - `DATABASE_URL`
+   - `NEXTAUTH_URL`
+   - `NEXT_PUBLIC_APP_URL`
+   - `NEXTAUTH_SECRET`
+   - `GOOGLE_CLIENT_ID`
+   - `GOOGLE_CLIENT_SECRET`
+   - `ANTHROPIC_API_KEY`
+3. Vercel Project Settings ichida Build Command ni `npm run vercel-build` qiling.
+4. Agar ma'lumotlarni seed qilish kerak bo'lsa, local terminalda PostgreSQL `DATABASE_URL` bilan:
+
+```bash
+npm run db:migrate:postgres
+npm run db:seed:postgres
+```
+
 ## 👤 Admin Hisob (seed dan keyin)
 
 ```

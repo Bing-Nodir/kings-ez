@@ -5,6 +5,7 @@ import CoursesPageClient from "@/components/course/CoursesPageClient";
 import Footer from "@/components/layout/Footer";
 
 export const metadata = { title: "Barcha Kurslar" };
+export const dynamic = "force-dynamic";
 
 export default async function CoursesPage() {
   const [courses, categories] = await Promise.all([

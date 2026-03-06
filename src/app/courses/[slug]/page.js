@@ -7,6 +7,8 @@ import Navbar from "@/components/layout/Navbar";
 import CourseDetailClient from "@/components/course/CourseDetailClient";
 import Footer from "@/components/layout/Footer";
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata({ params }) {
   const course = await db.course.findUnique({ where: { slug: params.slug } });
   if (!course) return { title: "Kurs topilmadi" };
